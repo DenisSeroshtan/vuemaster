@@ -3,10 +3,8 @@
     <h1>Создать событие {{this.$store.state['event/categories']}}</h1>
 
     <form @submit.prevent="createEvent">
-      <label>Select a category</label>
-      <select v-model="event.category">
-        <option v-for="cat in categories" :key="cat">{{ cat }}</option>
-      </select>
+      <BaseSelect v-model="event.category" label="Выберите катергорию" :options="categories"/>
+
       <h3>Name & describe your event</h3>
       <BaseInput
         v-model="event.title"
@@ -35,12 +33,7 @@
         <label>Date</label>
         <datepicker v-model="event.date" placeholder="Select a date"/>
       </div>
-      <div class="field">
-        <label>Select a time</label>
-        <select v-model="event.time">
-          <option v-for="time in times" :key="time">{{ time }}</option>
-        </select>
-      </div>
+      <BaseSelect class="field" v-model="event.time" label="Выберите время" :options="times"/>
       <input type="submit" class="button -fill-gradient" value="Submit">
     </form>
   </div>

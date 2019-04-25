@@ -375,6 +375,43 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "id": 104242,
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "BaseSelect",
+      "description": "Description BaseSelect",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": [],
+      "categories": "animal welfare"
+    },
+    {
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "id": 600317,
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Образование",
+      "description": "Описание образования",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
