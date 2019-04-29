@@ -5,6 +5,7 @@ import EventShow from './views/EventShow.vue'
 import EventList from './views/EventList.vue'
 import NotFound from './views/NotFound'
 import NetworkIssue from './views/NetworkIssue'
+import Example from './views/Example'
 import store from './store/store.js'
 
 Vue.use(Router)
@@ -61,6 +62,10 @@ export default new Router({
       path: '/network-issue',
       name: 'network-issue',
       component: NetworkIssue
+    },
+    {
+      path: '/example',
+      component: Example
     }
   ],
   mode: 'history'
