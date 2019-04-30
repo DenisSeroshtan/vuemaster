@@ -8,24 +8,13 @@
 </template>
 
 <script>
+import { formFieldMixin } from '../mixins/formFieldMixins'
 export default {
-  inheritAttrs: false,
+  mixins: [formFieldMixin],
   props: {
-    label: {
-      type: String,
-      default: ''
-    },
-    value: {
-      type: [String, Number]
-    },
     options: {
       type: Array,
       required: true
-    }
-  },
-  methods: {
-    onValue(event) {
-      this.$emit('input', event.target.value)
     }
   }
 }

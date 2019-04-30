@@ -61,10 +61,12 @@
       <div class="field">
         <label>Date</label>
         <datepicker
+          :language="ru"
           v-model="event.date"
-          placeholder="Select a date"
+          placeholder="Date"
           @opened="$v.event.date.$touch()"
           :class="{error: $v.event.date.$error}"
+          format="dd mm yy"
         />
       </div>
       <template v-if="$v.event.date.$error">
@@ -91,6 +93,7 @@
 
 <script>
 import Datepicker from 'vuejs-datepicker'
+import { ru } from 'vuejs-datepicker/dist/locale'
 import NProgress from 'nprogress'
 import { required } from 'vuelidate/lib/validators'
 export default {
@@ -104,12 +107,12 @@ export default {
     }
 
     return {
+      ru,
       times,
       categories: this.$store.state.event.categories,
       event: this.createFreshEventObject()
     }
   },
-
   methods: {
     createEvent() {
       this.$v.$touch()
